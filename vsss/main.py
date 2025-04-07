@@ -58,7 +58,6 @@ class KeyboardControl:
                         self.feedback_queue.put(line)
             except Exception as e:
                 self.feedback_queue.put(f"Erro leitura: {e}")
-            time.sleep(0.01)
 
     def process_input(self, keys):
         y = 0
@@ -169,7 +168,7 @@ class KeyboardControl:
                 screen.blit(font.render("WASD para mover | X para trocar ID", True, (200, 200, 200)), (10, 40))
 
                 # Feedback
-                screen.blit(font.render("Mensagens do STM32:", True, (255, 255, 0)), (10, 110))
+                screen.blit(font.render("Mensagens do VSSS:", True, (255, 255, 0)), (10, 110))
                 self.draw_feedback(screen, font)
 
                 pygame.display.flip()
